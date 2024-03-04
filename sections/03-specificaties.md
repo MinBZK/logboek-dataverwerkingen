@@ -25,5 +25,3 @@ In latere versies zijn de volgende uitbreidingen voorzien:
 ### Gedrag
 
 ### Interfaces
-
-
