@@ -30,7 +30,7 @@ let localConfig = {
 
   alternateFormats: [
     {
-      label: "pdf",
+      label: "PDF",
       uri: "template.pdf",
     },
   ],
