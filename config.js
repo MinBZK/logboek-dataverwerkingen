@@ -1,5 +1,5 @@
 let localConfig = {
-  shortName: "dataverwerkingen",
+  shortName: "Logboek dataverwerkingen",
   publishDate: "2024-03-01",
   publishVersion: "0.1.0",
   github: "MinBZK/Logboek-Dataverwerkingen",
@@ -7,7 +7,7 @@ let localConfig = {
   license: "cc-by",
   specStatus: "WV",
   specType: "HR",
-  pubDomain: "dk",
+  pubDomain: "",
   useLogo: true,
   useLabel: true,
 
@@ -25,13 +25,6 @@ let localConfig = {
       name: "Logius Standaarden",
       company: "Logius",
       companyURL: "https://github.com/Logius-standaarden",
-    },
-  ],
-
-  alternateFormats: [
-    {
-      label: "PDF",
-      uri: "template.pdf",
     },
   ],
 
