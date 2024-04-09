@@ -13,10 +13,11 @@ snapshot: diagrams
 	cp -a $</*.svg ${BUILD_DIR}/$<
 	docker run --rm --volume ${CWD}:/app ${RESPEC_IMAGE} --disable-sandbox --localhost --src index.html --out build/index.html
 
+.PHONY: diagrams
 diagrams: $(patsubst %.puml,%.svg,$(wildcard diagrams/*.puml))
 
 diagrams/%.svg: diagrams/%.puml
-	cat $< | docker run --rm  -i ${PLANTUML_IMAGE} -tsvg > $@
+	cat $< | docker run --rm  --interactive ${PLANTUML_IMAGE} -svg > $@
 
 .PHONY: serve
 serve:
@@ -29,3 +30,4 @@ serve-snapshot:
 .PHONY: clean
 clean:
 	rm -rf ${BUILD_DIR}
+	rm -rf diagrams/*.svg
