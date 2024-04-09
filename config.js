@@ -25,7 +25,7 @@ const localConfig = {
     {
       name: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
       company: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties",
-      companyURL: "https://wwww.minbzk.nl/",
+      companyURL: "https://www.minbzk.nl/",
     },
   ],
 
