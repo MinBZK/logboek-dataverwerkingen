@@ -15,6 +15,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  line:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Lint
+        run: make lint
   check-diagrams:
     runs-on: ubuntu-latest
     steps:

@@ -1,7 +1,11 @@
 RESPEC_VERSION := latest
 RESPEC_IMAGE := registry.gitlab.com/commonground/nlx/fsc-base-image/respec:$(RESPEC_VERSION)
+
 PLANTUML_VERSION := latest
 PLANTUML_IMAGE := registry.gitlab.com/commonground/nlx/fsc-base-image/plantuml:${PLANTUML_VERSION}
+
+MARKDOWNLINT_VERSION := v0.13.0
+MARKDOWNLINT_IMAGE := docker.io/davidanson/markdownlint-cli2:${MARKDOWNLINT_VERSION}
 
 BUILD_DIR := build
 CWD := $(shell pwd)
@@ -18,6 +22,10 @@ diagrams: $(patsubst %.puml,%.svg,$(wildcard diagrams/*.puml))
 
 diagrams/%.svg: diagrams/%.puml
 	cat $< | docker run --rm  --interactive ${PLANTUML_IMAGE} -svg > $@
+
+.PHONY: lint
+lint:
+	docker run --rm --volume ${CWD}:/workdir ${MARKDOWNLINT_IMAGE}
 
 .PHONY: serve
 serve:

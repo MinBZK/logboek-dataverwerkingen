@@ -1,6 +1,7 @@
 # Doel
 
-De Logboek Dataverwerkingen LDV specificaties beschrijven een manier om technisch interoperabele functionaliteit voor het loggen van dataverwerkingen te implementeren. 
+De Logboek Dataverwerkingen LDV specificaties beschrijven een manier om technisch interoperabele functionaliteit voor het
+loggen van dataverwerkingen te implementeren.
 
 Met de LDV specificatie wordt technische interoperabiliteit bereikt over de grenzen van organisaties:
 
