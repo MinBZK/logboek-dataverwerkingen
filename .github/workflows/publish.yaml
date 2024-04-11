@@ -2,7 +2,7 @@ name: Publish
 
 on:
   push:
-    branches: ["develop"]
+    branches: [develop]
   workflow_dispatch:
 
 permissions:
@@ -15,30 +15,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  line:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Lint
-        run: make lint
-  check-diagrams:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Make diagrams
-        run: make --always-make diagrams
-      - name: Check
-        run: |
-          if OUTPUT=$(git status --porcelain diagrams) && [ -n "${OUTPUT}" ]; then
-            echo "Found generated diagrams that do not match the source:"
-            echo "${OUTPUT}"
-            false
-          fi
+  lint:
+    uses: ./.github/workflows/lint.yaml
   build:
     runs-on: ubuntu-latest
-    needs: check-diagrams
+    needs: lint
     steps:
       - name: Checkout
         uses: actions/checkout@v4
