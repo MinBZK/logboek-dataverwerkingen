@@ -12,7 +12,6 @@ Het is **AANBEVOLEN** om de standaard Logboek Dataverwerkingen te gebruiken met 
   Deze extensie breidt de standaard uit met specificaties voor het loggen van Verwerkingsactiviteiten en een interface
   naar de definitie van deze Verwerkingsactiviteiten. Dit is bijv. een interface op een *Register van Verwerkingsactiviteiten*
   zoals bedoeld in AVG artikel 30.
-  adsad
 
 Daarnaast worden de volgende extensies verwacht:
 

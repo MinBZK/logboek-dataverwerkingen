@@ -1,27 +1,4 @@
 globs:
+  - docs/besluiten
   - sections
-
-config:
-  default: true
-
-  heading-style:
-    style: atx
-
-  ul-style:
-    style: dash
-
-  no-multiple-blanks:
-    maximum: 2
-
-  line-length:
-    line_length: 120
-
-  blanks-around-headings:
-    lines_above: 2
-
-  no-duplicate-heading:
-    siblings_only: true
-
-  no-inline-html:
-    allowed_elements:
-      - section
+  - README.md
