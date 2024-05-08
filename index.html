@@ -11,12 +11,37 @@
   <script src="config.js" class="remove"></script>
 </head>
 <body>
-  <section id="abstract" data-include="sections/00-abstract.md" data-include-format="markdown"></section>
+  <section id="abstract" data-include="sections/00-abstract/00-abstract.md" data-include-format="markdown"></section>
   <section id="sotd"></section>
 
-  <section data-include="sections/01-introductie.md" class="informative" data-include-format="markdown"></section>
-  <section data-include="sections/02-architectuur.md" class="informative" data-include-format="markdown"></section>
-  <section data-include="sections/03-specificaties.md" data-include-format="markdown"></section>
+  <section>
+    <h2>Introductie</h2>
+    <section data-include="sections/01-introductie/00-introductie.md" data-include-format="markdown"></section>
+    <section data-include="sections/01-introductie/01-doel.md" data-include-format="markdown"></section>
+    <section data-include="sections/01-introductie/02-terminologie.md" data-include-format="markdown"></section>
+    <section data-include="sections/01-introductie/03-algemene-werking.md" data-include-format="markdown"></section>
+  </section>
+ 
+  <section>
+    <h2>Architectuur</h2>
+    <section data-include="sections/02-architectuur/00-introductie.md" data-include-format="markdown"></section>
+    <section data-include="sections/02-architectuur/01-architectuur.md" class="informative" data-include-format="markdown"></section>
+  </section>
+ 
+  <section>
+    <h2>Specificaties Logboek Dataverwerkingen</h2>
+    <section data-include="sections/03-specificaties/00-introductie.md" data-include-format="markdown"></section>
+    <section data-include="sections/03-specificaties/01-specificaties.md" data-include-format="markdown"></section>
+  </section>
+
+  <section>
+    <h2>Specificaties extensie Verwerkingsactiviteiten</h2>
+    <section data-include="sections/04-extensie-verwerkingsactiviteiten/00-introductie.md" data-include-format="markdown"></section>
+    <section data-include="sections/04-extensie-verwerkingsactiviteiten/01-specificaties.md" data-include-format="markdown"></section>
+  </section>
+
+
+</section>
 
   <section id="conformance"></section>
   <section id="tof"></section>
