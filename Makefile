@@ -4,8 +4,8 @@ RESPEC_IMAGE := registry.gitlab.com/commonground/nlx/fsc-base-image/respec:$(RES
 PLANTUML_VERSION := latest
 PLANTUML_IMAGE := registry.gitlab.com/commonground/nlx/fsc-base-image/plantuml:${PLANTUML_VERSION}
 
-MARKDOWNLINT_VERSION := v0.13.0
-MARKDOWNLINT_IMAGE := docker.io/davidanson/markdownlint-cli2:${MARKDOWNLINT_VERSION}
+MARKDOWNLINT_VERSION := 0.13.0
+MARKDOWNLINT_IMAGE := docker.io/davidanson/markdownlint-cli2:v${MARKDOWNLINT_VERSION}
 
 BUILD_DIR := build
 CWD := $(shell pwd)
