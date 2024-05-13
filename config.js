@@ -2,7 +2,7 @@ const localConfig = {
   shortName: "logboek-dataverwerkingen",
   publishDate: "2024-03-01",
   publishVersion: "0.1.0",
-  github: "MinBZK/Logboek-Dataverwerkingen",
+  github: "MinBZK/logboek-dataverwerkingen",
 
   license: "cc-by",
   specStatus: "wv",
