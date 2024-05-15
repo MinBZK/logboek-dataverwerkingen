@@ -1,4 +1,8 @@
-# Algemene werking
+# Algemene werking van de standaard
+
+Applicaties loggen 
+
+
 
 
 ## Extensies

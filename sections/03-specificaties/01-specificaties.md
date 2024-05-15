@@ -1,47 +1,22 @@
-# Specificaties
-
-Dit hoofdstuk beschrijft de specificaties van:
-- Standaard Logboek Dataverwerkingen
-- Extensie Verwerkingsactiviteiten
-
-In latere versies zijn de volgende uitbreidingen voorzien:
-- Extensie Dataobjecten en Betrokkenen
-- Extensie Inzage
-
-
-## Standaard Logboek Dataverwerkingen
-
-### Protocollen
-
-
-De [Trace Context](https://www.w3.org/TR/trace-context/) standaard wordt gebruikt voor het koppelen van logs in meerdere organisaties.
 
 
 
+## Protocollen
+
+De protocollen die worden gebruikt tussen applicatie en logboek en voor het uitvoeren van transacties tussen applicaties worden niet voorgeschreven in de standaard. Dit biedt de vrijheid om de standaard toe te voegen aan vrijwel iedere softwareoplossing.
+
+Het is ***AANBEVOLEN*** om het OpenTelemetry Protocol (OTLP) te gebruiken.
+
+Als gebruik wordt gemaakt van HTTP/1.1 of HTTP/2 voor het uitvoeren van dataverwerkingen in meerdere applicaties ***MOET*** gebruik worden gemaakt van de Trace Context specificatie voor het uitwisselen van context informatie.
+
+
+## Logboek
+
+Voor ieder Logboek waarin dataverwerkingen worden gelogd gelden de volgende specificaties voor gedrag en interface.
 
 ### Gedrag
 
-* Een verwerking moet traceerbaar zijn. Dat betekent dat het verklaarbaar moet zijn wat voor de verwerking heeft gezorgd. Zowel binnen een organisatie als over organisaies heen. Een verstrekker (door middel van bijvoorbeeld een HTTP API) van gegevens ..(?)
-* Tijdtip van de verwerking gezien door het systeem wat de verwerking uitvoert
-* Soort bron: (HTTP) client, server, intern process
-* Bron: naam en versie van het softwarecomponent dat de verwerking uitvoert. En eventuele extra relevante informatie over de bron.
-* Status van de verwerking. Is de verwerking uitgevoerd of niet.
-* Lijst van attributen welke relevant zijn voor de verwerking. Welke attributen dat zijn, kunnen in extenties opgenomen worden. Inclususief het datatype en hoet het geinterperteerd dient te worden.
-
-
-#### Randvoorwaarden
-
-* Registratie van verwerkingen moeten een ack krijgen
-* Transport encryptie (TLS)
-* Elke verwerking die plaats vind moet geregistreerd worden. Het is niet de bedoeling om te sample'en.
-* Verwerkingregistratie moet snel verwerkt kunnen worden. Moet niet vertragen.
-
-Noot: hier kunnen we het eea van overnemen/op baseren: https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/requirements.md#opentelemetry-protocol-requirements
-* Throughput
-* Backwards Compatibility
-
-
-### Interfaces
+### Interface
 
 #### Velden
 
@@ -63,12 +38,42 @@ Wanneer een attribuut verplicht moet zijn maar het niet altijd lukt om op te gev
 * `dpl.core.user`: Gebruiker die verwerking heeft geïnitieerd; URI
 * `dpl.core.delete_after`: Na dit tijdsip moet deze verwerking verwijderd zijn
 
+## Applicatie
 
+Voor iedere applicatie waarin dataverwerkingen plaatsvinden die gelogd moeten worden gelden de volgende specificaties voor het gedrag.
 
-## Extensie Verwerkingsactiviteiten
-
-### Protocol
 
 ### Gedrag
 
-### Interfaces
+* Een verwerking moet traceerbaar zijn. Dat betekent dat het verklaarbaar moet zijn wat voor de verwerking heeft gezorgd. Zowel binnen een organisatie als over organisaies heen. Een verstrekker (door middel van bijvoorbeeld een HTTP API) van gegevens ..(?)
+* Tijdtip van de verwerking gezien door het systeem wat de verwerking uitvoert
+* Soort bron: (HTTP) client, server, intern process
+* Bron: naam en versie van het softwarecomponent dat de verwerking uitvoert. En eventuele extra relevante informatie over de bron.
+* Status van de verwerking. Is de verwerking uitgevoerd of niet.
+* Lijst van attributen welke relevant zijn voor de verwerking. Welke attributen dat zijn, kunnen in extenties opgenomen worden. Inclususief het datatype en hoet het geinterperteerd dient te worden.
+
+### Randvoorwaarden
+
+* Registratie van verwerkingen moeten een ack krijgen
+* Transport encryptie (TLS)
+* Elke verwerking die plaats vind moet geregistreerd worden. Het is niet de bedoeling om te sample'en.
+* Verwerkingregistratie moet snel verwerkt kunnen worden. Moet niet vertragen.
+
+Noot: hier kunnen we het eea van overnemen/op baseren: https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/requirements.md#opentelemetry-protocol-requirements
+* Throughput
+* Backwards Compatibility
+
+
+### Interface
+
+
+
+
+## Register
+
+Voor ieder register met statische gegevens over dataverwerkingen die gelogd moeten worden gelden de volgende specificaties voor het gedrag en de interface
+
+### Gedrag
+
+### Interface
+
