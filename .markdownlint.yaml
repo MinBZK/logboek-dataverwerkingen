@@ -9,8 +9,7 @@ ul-style:
 no-multiple-blanks:
   maximum: 2
 
-line-length:
-  line_length: 120
+line-length: false
 
 blanks-around-headings:
   lines_above: 2
@@ -21,3 +20,6 @@ no-duplicate-heading:
 no-inline-html:
   allowed_elements:
     - section
+    - br
+
+no-emphasis-as-heading: false
