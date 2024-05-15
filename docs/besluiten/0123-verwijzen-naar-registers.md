@@ -1,4 +1,4 @@
-# { Titel }
+# Verwijzingen naar registers zijn zo los mogelijk
 
 - Status: proposed
 - Datum: 2024-05-24
@@ -6,12 +6,20 @@
 
 ## Context en probleemstelling
 
-{ Beschrijf de context en de probleemstelling }
+In de logrecords staat zo min mogelijk inhoudelijke informatie (ADR xxx). Informatie over verwerkingsactiviteiten ligt vast in specifieke registers. 
+
+- Er kunnen meerdere van deze registers zijn
+- Deze kunnen ook van andere organisaties zijn
+- Naar welk register wordt verwezen is afhankelijk van het type dataverwerking
+- Het Register van Verwerkingsactiviteiten (RvVA) is voor veel organisaties verplicht vanuit AVG art. 30, echter niet voor alle organisaties
+- Als een register bestaat, betekent dit niet dat het ook ontsloten wordt met eeen API
+
+De standaard voor logging moet functioneren gegeven bovenstaande feiten.
 
 
 ## Besluit
 
-{ Beschrijf het genomen besluit }
+De link naar de uitwerking van een verwerkingsactiviteit bestaat uit een *identifier* en daarnaast een URI, URL of URN, in de vorm van *key value pairs*. Eventuele nadere invulling voor het verwijzen naar specifieke registers (zoals het RvVA) wordt uitgewerkt in extensies.
 
 
 ## Gevolgen

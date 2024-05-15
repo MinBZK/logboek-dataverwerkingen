@@ -1,5 +1,7 @@
 # Doel
 
+*- nader uit te werken op basis definitief beleid -*
+
 De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interoperabele functionaliteit voor het
 loggen van dataverwerkingen te implementeren, door voor de volgende functionaliteit de interface en het gedrag voor te schrijven:
 
