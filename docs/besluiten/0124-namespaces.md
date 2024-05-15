@@ -1,12 +1,12 @@
 # Attributen bestaan in een namespace
 
-- Status: draft 
+- Status: draft
 - Datum: { YYYY-MM-DD wanneer het besluit voor het laatst is aangepast }
 
 
 ## Context en probleemstelling
 
-Lijsten attributen per extensie 
+Lijsten attributen per extensie
 Uitwerken
 
 
