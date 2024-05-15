@@ -1,0 +1,32 @@
+@startuml
+header: UML Component Diagram
+title Context standaard Logboek Dataverwerkingen
+
+frame "Verantwoordelijke A" {
+
+    component "Logboek" as loggerA
+    component "Applicatie" as softwareA
+    component "Register" as registerA
+}
+frame "Verantwoordelijke B" {
+
+    component "Logboek" as loggerB
+    component "Applicatie" as softwareB
+    component "Register" as registerB
+}
+
+loggerA <-[bold,#green]u- softwareA
+registerA -[hidden]u- softwareA
+registerA -[dashed,#green]r- loggerA
+
+loggerB <-[bold,#green]u- softwareB
+registerB -[hidden]u- softwareB
+loggerB -[dashed,#green]r- registerB
+
+softwareA -[bold,#green]l-> softwareB
+
+skinparam boxPadding 50
+skinparam linetype polyline
+skinparam linetype ortho
+@enduml
+
