@@ -1,8 +1,6 @@
 # Algemene werking van de standaard
 
-Applicaties loggen 
-
-
+Applicaties loggen Dataverwerkingen in een Logboek component. Elke Dataverwerking wordt apart gelogd. Dataverwerkingen binnen dezelfde context (bijvorbeeld een organisatie of binnen een verantwoordelijkheid) worden gegroepeerd met behulp van een Trace. Dataverwerkingen waarbij verschillende contexten zijn betrokken worden aan elkaar gelinkt door informatie over de Trace en Dataverwerking als metadata mee te geven met de Transactie.Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
 
 
 ## Extensies
@@ -12,27 +10,24 @@ Het standaardiseren van aanvullende functionaliteit wordt gedaan met behulp van 
 
 Het is **AANBEVOLEN** om de standaard Logboek Dataverwerkingen te gebruiken met de volgende extensies:
 
-- **Extensie Verwerkingsactiviteiten**
-  Deze extensie breidt de standaard uit met specificaties voor het loggen van Verwerkingsactiviteiten en een interface
-  naar de definitie van deze Verwerkingsactiviteiten. Dit is bijv. een interface op een *Register van Verwerkingsactiviteiten*
+- *Extensie Verwerkingsactiviteiten*<br>
+  Deze extensie breidt de standaard uit met een interfacebeschrijving voor Registers met statische informatie over verwerkingsactiviteiten die voorkomen in een organisatie. Dit is bijv. een interface op een *Register van Verwerkingsactiviteiten*
   zoals bedoeld in AVG artikel 30.
 
-Daarnaast worden de volgende extensies verwacht:
+*-- NB. De scope van onderstaande extensies is nog onderwerp van gesprek. --*
 
-NB. De scope van onderstaande extensies is nog onderwerp van gesprek.
-
-- **Extensie Betrokkenen**
+- *Extensie Betrokkenen*<br>
   Met deze extensie worden (ketens van) logs gekoppeld aan de identiteit van een betrokkene, zodat actief informeren of
   het faciliteren van inzageverzoeken gestandaardiseerd mogelijk wordt.
 
-- **Extensie Verwerkte Data**
+- *Extensie Verwerkte Data*<br>
   Deze extensie specificeert een uniforme manier om verwerkte data in logregels op te nemen,
 
-- **Extensie Inzage**
+- *Extensie Inzage*<br>
   Deze extensie heeft een afhankelijkheid van de extensies *Betrokkenen* en *Verwerkte Data*, en biedt een interface op
   de logs vanuit het perspectief van de betrokkene.
 
-- **Extensie Manipulatiebestendigheid**
+- *Extensie Manipulatiebestendigheid*<br>
   Deze extensie beschrijft hoe logs zodanig kunnen worden ingericht dat manipulatie van de logregords kan worden aangetoond,
   en hierover zinnige uitspraken kunnen worden gedaan wanneer de logs van meerdere organisaties aan elkaar worden gerelateerd.
 
