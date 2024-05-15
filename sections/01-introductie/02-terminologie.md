@@ -19,8 +19,15 @@ Softwaretoepassing waarmee het log van dataverwerkingen wordt bijgehouden.
 
 Softwaretoepassing waarmee statische gegevens over dataverwerkingen worden geregistreerd en ter beschikking gesteld, zoals het Register van Verwerkingsactiviteiten uit AVG art. 30.
 
+*Trace:*
 
-*Transactie:*
+Concept waarmee bij elkaar behorende Dataverwerkingen binnen de grenzen van een systeem worden gegroepeerd.
+
+*Verantwoordelijke:*
+
+*-- nog definiëren --*
+
 
 *Verwerkingsactiviteit:*
 
+*-- nog definiëren --*
