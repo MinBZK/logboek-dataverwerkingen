@@ -24,22 +24,25 @@ Voor ieder Logboek waarin dataverwerkingen worden gelogd gelden de volgende spec
 De interface ***MOET*** de volgende velden implementeren:
 
 - `trace_id`: 16 bytes, Uniek ID van groep bij elkaar behorende Dataverwerkingen, genaamd een *trace*
-- `processing_id`: 8 bytes, Uniek ID van de Dataverwerking
-- `processing_operation_name`: string, Naam van de specifieke operatie binnen de Dataverwerking
-- `parent_processing_id`: 8 bytes, optioneel, ID van een Dataverwerking binnen de huidige Verwerkingsactiviteit die de huidige Dataverwerking gestart heeft
+- `operation_id`: 8 bytes, Uniek ID van de Dataverwerking
+- `parent_operation_id`: 8 bytes, optioneel, ID van een Dataverwerking binnen de huidige Verwerkingsactiviteit die de huidige Dataverwerking
+gestart heeft
+- `name`: string, Naam van de specifieke operatie binnen de Dataverwerking
 - `start_time`: timestamp in milliseconden, Tijdstip waarop de Dataverwerking gestart is
 - `end_time`: timestamp in milliseconden, Tijdstip waarop de Dataverwerking beëindigd is
 - `status_code`: Status van de Dataverwerking
-- `foreign`: Bericht, optioneel. Bestaat uit drie velden:
+- `foreign_operation`: Bericht, optioneel. Bestaat uit drie velden:
   - `trace_id`: trace_id uit de aanroepende organisatie
-  - `processing_id`: processing_id uit de aanroepende organisatie
+  - `operation_id`: processing_id uit de aanroepende organisatie
   - `entity`: URI verwijzend naar externe entiteit
 - `attributes`: Lijst attributen in de vorm van *KeyValue pairs*.
+- `resource`: Bericht. Bestaat uit het volgende veld:
+  - `attributes`: Lijst attributen in de vorm van *KeyValue pairs*.
 
 Het veld *status_code* is een enumeratie die de volgende waarden kan bevatten:
 *-- nog correct uitwerken --*
 
-- 0: STATUS_CODE_UNSPECIFIED:
+- 0: STATUS_CODE_UNKNOWN:
 - 1: STATUS_CODE_OK:
 - 2: STATUS_CODE_ERROR:
 
@@ -55,6 +58,7 @@ Attributen bestaan in een namespace met prefix: `dpl.` (afkorting voor *data pro
 De volgende attributen zijn mogelijk:
 
 - `dpl.core.processing_activity_id`: URI; Verwijzing naar register met meer informatie over de verwerkingsactiviteit
+- `dpl.core.confidentiality_level`: Niveau van vertrouwelijkheid
 
 
 *- ter discussie, afhankelijk van juridische afwegingen -*
@@ -76,7 +80,7 @@ De applicatie ***MOET*** een Trace starten voor iedere Dataverwerking waarvan no
 
 De applicatie
 
-Als een applicatie aangeroepen kan worden vanuit een andere applicatie ***MOET*** de applicatie Trace Context metadata accepteren bij een dergelijke aanroepen deze metadata kunnen omzetten naar een `foreign` bericht.
+Als een applicatie aangeroepen kan worden vanuit een andere applicatie ***MOET*** de applicatie Trace Context metadata accepteren bij een dergelijke aanroepen deze metadata kunnen omzetten naar een `foreign_operation` bericht.
 
 De applicatie ***MOET*** bijhouden of een Dataverwerking geslaagd of mislukt is en deze per Dataverwerking als status meegeven aan het Logboek.
 
