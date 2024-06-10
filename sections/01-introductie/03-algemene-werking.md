@@ -1,6 +1,6 @@
 # Algemene werking van de standaard
 
-Applicaties loggen Dataverwerkingen in een Logboek component. Elke Dataverwerking wordt apart gelogd. Dataverwerkingen binnen dezelfde context (bijvorbeeld een organisatie of binnen een verantwoordelijkheid) worden gegroepeerd met behulp van een Trace. Dataverwerkingen waarbij verschillende contexten zijn betrokken worden aan elkaar gelinkt door informatie over de Trace en Dataverwerking als metadata mee te geven met de Transactie.Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
+Applicaties loggen Dataverwerkingen in een Logboek component. Elke Dataverwerking wordt apart gelogd. Dataverwerkingen binnen dezelfde context (bijvorbeeld een organisatie of binnen een verantwoordelijkheid) worden gegroepeerd met behulp van een Trace. Dataverwerkingen waarbij verschillende contexten zijn betrokken worden aan elkaar gelinkt door informatie over de Trace en Dataverwerking als metadata mee te geven met de Transactie. Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
 
 
 ## Extensies
@@ -44,4 +44,4 @@ manier kan een groep organisaties interoperabiliteit organiseren. Voorbeelden va
 ## Use case
 
 Typische use case voor het gebruik van de standaard is een samenwerking van meerdere organisaties die interoperabiliteit
-willen bereiken bij het loggen van dataverwerkingen.
+willen bereiken bij het loggen van dataverwerkingen, om zo op eenduidige manier te kunnen verantwoorden over de dataverwerking.
