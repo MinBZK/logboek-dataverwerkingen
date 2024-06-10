@@ -68,6 +68,7 @@ Voor iedere applicatie waarin dataverwerkingen plaatsvinden die gelogd moeten wo
 De applicatie ***MOET*** een Trace starten voor iedere Dataverwerking waarvan nog geen Trace bekend is.
 
 De applicatie ***MOET*** voor iedere Dataverwerking een logregel wegschrijven in een Logboek. *Log Sampling* is niet toegestaan. 
+Als een applicatie aangeroepen kan worden vanuit een andere applicatie ***MOET*** de applicatie Trace Context metadata accepteren bij een dergelijke aanroepen deze metadata kunnen omzetten naar een `foreign` bericht.
 
 De applicatie ***MOET*** bijhouden of een Dataverwerking geslaagd of mislukt is en dit per Dataverwerking als status meegeven aan het Logboek.
 
