@@ -27,7 +27,7 @@ De link naar de uitwerking van een verwerkingsactiviteit bestaat uit een *identi
 { Wat zijn de gevolgen na het nemen van dit besluit }
 
 
-<!-- Optioneel 
+<!-- Optioneel
 
 ## Meer informatie
 
