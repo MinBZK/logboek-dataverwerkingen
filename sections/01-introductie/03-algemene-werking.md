@@ -10,18 +10,18 @@ Het standaardiseren van aanvullende functionaliteit wordt gedaan met behulp van 
 
 Het is **AANBEVOLEN** om de standaard Logboek Dataverwerkingen te gebruiken met de volgende extensies:
 
-- *Extensie Verwerkingsactiviteiten*<br>
+- *Extensie Register van Verwerkingsactiviteiten*<br>
   Deze extensie breidt de standaard uit met een interfacebeschrijving voor Registers met statische informatie over verwerkingsactiviteiten die voorkomen in een organisatie. Dit is bijv. een interface op een *Register van Verwerkingsactiviteiten*
   zoals bedoeld in AVG artikel 30.
+  - [ ] Discussie: Kan ook als losse standaard, wat is beter?
 
 *-- NB. De scope van onderstaande extensies is nog onderwerp van gesprek. --*
 
 - *Extensie Betrokkenen*<br>
-  Met deze extensie worden (ketens van) logs gekoppeld aan de identiteit van een betrokkene, zodat actief informeren of
-  het faciliteren van inzageverzoeken gestandaardiseerd mogelijk wordt.
+  Met deze extensie wordt meer precies uitgewerkt hoe de identiteit van een betrokkene wordt gerelateerd aan een verwerking, zodat actief informeren of het faciliteren van inzageverzoeken gestandaardiseerd mogelijk wordt.
 
 - *Extensie Verwerkte Data*<br>
-  Deze extensie specificeert een uniforme manier om verwerkte data in logregels op te nemen,
+  Deze extensie specificeert een uniforme manier om verwerkte data in logregels op te nemen
 
 - *Extensie Inzage*<br>
   Deze extensie heeft een afhankelijkheid van de extensies *Betrokkenen* en *Verwerkte Data*, en biedt een interface op

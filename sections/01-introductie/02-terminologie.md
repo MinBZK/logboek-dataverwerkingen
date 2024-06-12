@@ -6,6 +6,11 @@ De volgende lijst beschrijft terminologie in de betekenis zoals deze wordt gebru
 
 Softwaretoepassing waarmee dataverwerkingen worden uitgevoerd.
 
+*Betrokkene*
+
+*-- nog definiëren --*
+
+
 *Dataverwerking:*
 
 Aansluitend bij de Algemene Verordening Persoonsgegevens (art. 4 lid 2), maar breder toegepast dan alleen persoonsgegevens, wordt voor deze standaard *‘elke bewerking of elk geheel van bewerkingen met betrekking tot gegevens, al dan niet uitgevoerd via geautomatiseerde procedures, zoals het verzamelen, vastleggen, ordenen, structureren, opslaan, bijwerken of wijzigen, opvragen, raadplegen, gebruiken, verstrekken door middel van doorzending, verspreiden of op andere wijze ter beschikking stellen, aligneren of combineren, afschermen, wissen of vernietigen van gegevens’* opgevat als een dataverwerking.
