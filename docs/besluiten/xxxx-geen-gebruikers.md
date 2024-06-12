@@ -1,13 +1,12 @@
-# Attributen bestaan in een namespace
+# { Titel }
 
-- Status: draft
+- Status: { draft | proposed | rejected | accepted | deprecated | superseded by [ADR-0042](0042-asterisk.md) }
 - Datum: { YYYY-MM-DD wanneer het besluit voor het laatst is aangepast }
 
 
 ## Context en probleemstelling
 
-Lijsten attributen per extensie
-Uitwerken
+{ Beschrijf de context en de probleemstelling }
 
 
 ## Besluit

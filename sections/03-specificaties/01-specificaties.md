@@ -4,109 +4,82 @@ De protocollen die worden gebruikt tussen applicatie en logboek en voor het uitv
 
 Het is ***AANBEVOLEN*** om het OpenTelemetry Protocol (OTLP) te gebruiken in de interactie tussen Applicatie en Logboek.
 
-Als gebruik wordt gemaakt van HTTP/1.1 of HTTP/2 voor het uitvoeren van dataverwerkingen in meerdere applicaties ***MOET*** gebruik worden gemaakt van de Trace Context specificatie voor het uitwisselen van context informatie.
-
-*-- Generieker beschrijven: wat als geen HTTP wordt gebruikt? Dan Trace Context op andere manier implementeren --*
+Als gebruik wordt gemaakt van  HTTP/1.1 [[RFC9112]] of HTTP/2 [[RFC9113]] voor het uitvoeren van dataverwerkingen in meerdere applicaties ***MOET*** gebruik worden gemaakt van de Trace Context specificatie voor het uitwisselen van context informatie.
 
 
-## Logboek
+## Component: Logboek
 
 Voor ieder Logboek waarin dataverwerkingen worden gelogd gelden de volgende specificaties voor gedrag en interface.
 
 
 ### Gedrag
 
-*-- Uit te werken --*
+Het Logboek ***MOET*** TLS afdwingen op connecties volgens de binnen de organisatie gangbare standaard.
+
+Het Logboek ***MOET*** het wegschrijven van elke logregel bevestigen.
 
 
 ### Interface
 
 De interface ***MOET*** de volgende velden implementeren:
 
-- `trace_id`: 16 bytes, Uniek ID van groep bij elkaar behorende Dataverwerkingen, genaamd een *trace*
-- `operation_id`: 8 bytes, Uniek ID van de Dataverwerking
-- `parent_operation_id`: 8 bytes, optioneel, ID van een Dataverwerking binnen de huidige Verwerkingsactiviteit die de huidige Dataverwerking
-gestart heeft
-- `name`: string, Naam van de specifieke operatie binnen de Dataverwerking
-- `start_time`: timestamp in milliseconden, Tijdstip waarop de Dataverwerking gestart is
-- `end_time`: timestamp in milliseconden, Tijdstip waarop de Dataverwerking beëindigd is
-- `status_code`: Status van de Dataverwerking
-- `foreign_operation`: Bericht, optioneel. Bestaat uit drie velden:
-  - `trace_id`: trace_id uit de aanroepende organisatie
-  - `operation_id`: processing_id uit de aanroepende organisatie
-  - `entity`: URI verwijzend naar externe entiteit
-- `attributes`: Lijst attributen in de vorm van *KeyValue pairs*.
-- `resource`: Bericht. Bestaat uit het volgende veld:
-  - `attributes`: Lijst attributen in de vorm van *KeyValue pairs*.
+| Veld                  | Type           | optioneel | Omschrijving |
+|-----------------------|----------------|---------------|--------------|
+| `trace_id`            | 16 byte        | verplicht     | Uniek ID van *Trace*, een groep bij elkaar behorende Dataverwerkingen |
+| `operation_id`        |  8 byte        | verplicht     | Uniek ID van de Dataverwerking |
+| `status_code`         | enum           | verplicht     | Status van de Dataverwerking |
+| `name`                | string         | verplicht     | Naam van de specifieke operatie binnen de Dataverwerking |
+| `start_time`          | timestamp (ms) | verplicht     | Tijdstip waarop de Dataverwerking gestart is |
+| `end_time`            | timestamp (ms) | verplicht     | Tijdstip waarop de Dataverwerking beëindigd is |
+| `parent_operation_id` |  8 byte        | optioneel     | ID van aanroepende Dataverwerking *binnen de huidige Verwerkingsactiviteit* |
+| `foreign_operation`   | message        | optioneel     |              |
+| `resource`            | message        | optioneel     |              |
+| `attributes`          | list           | verplicht     | Verplichte key-value pairs |
 
-Het veld *status_code* is een enumeratie die de volgende waarden kan bevatten:
-*-- nog correct uitwerken --*
-
+Het veld `status_code` is een enumeratie die de volgende waarden kan bevatten:
 - 0: STATUS_CODE_UNKNOWN:
 - 1: STATUS_CODE_OK:
 - 2: STATUS_CODE_ERROR:
 
-*-- nog toevoegen --*
+Het veld `foreign_operation` is een `message`, opgebouwd uit de volgende velden:
+| Veld                  | Type           | optioneel | Omschrijving |
+|-----------------------|----------------|---------------|--------------|
+| `trace_id`            | 16 byte        | verplicht     | Uniek ID van *Trace* bij externe partij |
+| `operation_id`        |  8 byte        | verplicht     | Uniek ID van de Dataverwerking bij externe partij |
+| `entity`              |  URI           | verplicht     | URI verwijzend naar externe partij |
 
-- Systeem
+Het veld `resource` is een bericht, opgebouwd uit het volgende veld:
+  - `attributes`: Lijst attributen in de vorm van *KeyValue pairs*. De organisatie kan deze lijst gebruiken om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Dit zijn bijvoorbeeld naam en versienummer van een applicatie, of een verwijzing naar een record in een CMDB.
 
-
-#### Attributen
-
-Attributen bestaan in een namespace met prefix: `dpl.` (afkorting voor *data processing log*).
-
-De volgende attributen zijn mogelijk:
+Het veld `attributes` is een lijst van *key-value pairs*, in een namespace met prefix `dpl.` (data processing log). De volgende attributen zijn mogelijk in de namespace `core`:
 
 - `dpl.core.processing_activity_id`: URI; Verwijzing naar register met meer informatie over de verwerkingsactiviteit
-- `dpl.core.confidentiality_level`: Niveau van vertrouwelijkheid
+- `dpl.core.data_subject_id`: ID van de betrokkene; versleuteld. Dit is bijvoorbeeld een `BSN` of `Vreemdelingennummer` waarmee wordt aangeduid welke persoon betrokkene is bij de verwerking, gelet op de AVG.
 
 
-*- ter discussie, afhankelijk van juridische afwegingen -*
 
-- `dpl.core.user`: Gebruiker
-- `dpl.core.delete_after`: Na dit tijdstip moet deze verwerking verwijderd zijn
-
-
-## Applicatie
+## Component: Applicatie
 
 Voor iedere applicatie waarin dataverwerkingen plaatsvinden die gelogd moeten worden gelden de volgende specificaties voor het gedrag.
 
 
 ### Gedrag
 
-De applicatie ***MOET*** voor iedere Dataverwerking een logregel wegschrijven in een Logboek.
-
 De applicatie ***MOET*** een Trace starten voor iedere Dataverwerking waarvan nog geen Trace bekend is.
 
-De applicatie
+De applicatie ***MOET*** voor iedere Dataverwerking een logregel wegschrijven in een Logboek. *Log Sampling* is niet toegestaan. 
+
+De applicatie ***MOET*** bijhouden of een Dataverwerking geslaagd of mislukt is en dit per Dataverwerking als status meegeven aan het Logboek.
+
+Als een Dataverwerking meerdere Betrokkenen heeft dan ***MOET*** de applicatie voor iedere betrokkene een aparte logregel wegschrijven. Een logregel kan naar 0 of 1 betrokkenen verwijzen.
 
 Als een applicatie aangeroepen kan worden vanuit een andere applicatie ***MOET*** de applicatie Trace Context metadata accepteren bij een dergelijke aanroepen deze metadata kunnen omzetten naar een `foreign_operation` bericht.
 
-De applicatie ***MOET*** bijhouden of een Dataverwerking geslaagd of mislukt is en deze per Dataverwerking als status meegeven aan het Logboek.
-
-
-### Randvoorwaarden
-
-- Registratie van verwerkingen moeten een ack krijgen
-- Transport encryptie (TLS)
-- Elke verwerking die plaats vind moet geregistreerd worden. Het is niet de bedoeling om te sample'en.
-- Verwerkingregistratie moet snel verwerkt kunnen worden. Moet niet vertragen.
-
-Noot: hier kunnen we het eea van overnemen/op baseren: <https://github.com/open-telemetry/opentelemetry-proto/blob/main/docs/requirements.md#opentelemetry-protocol-requirements>
-
-- Throughput
-- Backwards Compatibility
-
 
 ### Interface
 
-
-## Register
-
-Voor ieder register met statische gegevens over dataverwerkingen die gelogd moeten worden gelden de volgende specificaties voor het gedrag en de interface
+De Applicatie heeft geen voor deze standaard relevante interface.
 
 
-### Gedrag
 
 
-### Interface

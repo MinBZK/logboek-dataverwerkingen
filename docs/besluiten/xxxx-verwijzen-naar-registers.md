@@ -10,9 +10,9 @@ In de logrecords staat zo min mogelijk inhoudelijke informatie (ADR xxx). Inform
 
 - Er kunnen meerdere van deze registers zijn
 - Deze kunnen ook van andere organisaties zijn
-- Naar welk register wordt verwezen is afhankelijk van het type dataverwerking
+- Naar welk register wordt verwezen is afhankelijk van het type dataverwerking. Verwerkingen in het kader van de Algemene Verordening Gegevensbescherming (AVG) verwijzen naar een Register van Verwerkingsactiviteiten zoals beschreven in AVG art. 30.
 - Het Register van Verwerkingsactiviteiten (RvVA) is voor veel organisaties verplicht vanuit AVG art. 30, echter niet voor alle organisaties
-- Als een register bestaat, betekent dit niet dat het ook ontsloten wordt met eeen API
+- Als een register bestaat, betekent dit niet dat het ook ontsloten wordt met eeen API. In de huidige praktijk bestaat het vaak alleen in een statisch document.
 
 De standaard voor logging moet functioneren gegeven bovenstaande feiten.
 
