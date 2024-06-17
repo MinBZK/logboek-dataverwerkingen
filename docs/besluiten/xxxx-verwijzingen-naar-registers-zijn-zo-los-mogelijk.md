@@ -25,16 +25,3 @@ De link naar de uitwerking van een verwerkingsactiviteit bestaat uit een *identi
 ## Gevolgen
 
 { Wat zijn de gevolgen na het nemen van dit besluit }
-
-
-<!-- Optioneel
-
-## Meer informatie
-
-{ Eventuele verwijzingen naar andere bronnen of websites }
-
-- [Website](https://example.com)
-- [Ander document](https://example.com)
-- ...
-
--->

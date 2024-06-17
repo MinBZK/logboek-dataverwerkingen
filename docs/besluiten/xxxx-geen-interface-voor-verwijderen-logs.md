@@ -22,13 +22,3 @@ Interoperabiliteit is daarbij niet relevant, omdat het wijzigen of verwijderen v
 
 - Iedere organisatie kan een bij de eigen implementatie passende oplossing kiezen voor het verwijderen van logrecords
 - Het wijzigen van logrecords is in principe ongewenst maar kan op soortgelijke manier opgelost worden
-
-
-<!-- Optioneel -->
-## Meer informatie
-
-{ Eventuele verwijzingen naar andere bronnen of websites }
-
-- [Website](https://example.com)
-- [Ander document](https://example.com)
-- ...

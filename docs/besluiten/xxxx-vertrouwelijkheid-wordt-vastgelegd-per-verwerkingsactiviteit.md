@@ -47,8 +47,3 @@ Vertrouwelijkheid wordt vastgelegd per Verwerkingsactiviteit
 - Vertrouwelijkheid wordt NIET uitgewisseld tussen organisaties
 - Wanneer een verwerking niet langer vertrouwelijk is, bijvoorbeeld na verjaring, dan volgt dit uit gegevens die vastliggen in het register (bijv. status vertrouwlijkheid, duur vertrouwelijkheid) en wat vastligt in een logrecord (verwerkingsactiviteit_id en datum)
 - Organisaties moeten vooraf borgen dat vertrouwelijke dataverwerkingen worden uitgevoerd op een manier die verantwoord kan worden, door dit te regelen op het niveau van Verwerkingsactiviteit. Dit kan tot gevolg hebben dat twee aparte processen nodig zijn voor het vertrouwelijk en niet-vertrouwelijk opvragen van gegvens.
-
-<!-- Optioneel -->
-## Meer informatie
-
-{ Eventuele verwijzingen naar andere bronnen of websites }

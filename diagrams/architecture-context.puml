@@ -1,6 +1,5 @@
 @startuml
 header: UML Component Diagram
-title Context standaard Logboek Dataverwerkingen
 
 frame "Verantwoordelijke A" {
 

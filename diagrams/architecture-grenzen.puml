@@ -1,0 +1,36 @@
+@startuml
+header: UML Component Diagram
+
+frame "Verantwoordelijke A" {
+
+    component "Logboek" as loggerA
+    component "Applicatie" as softwareA
+    component "Register" as registerA
+}
+frame "Verantwoordelijke B" {
+
+    component "Logboek" as loggerB
+    component "Applicatie" as softwareB
+    component "Register" as registerB
+}
+
+component "Spacer" as Dummy
+
+loggerA <-[bold]u- softwareA
+registerA -[hidden]u- softwareA
+registerA -[dashed]r- loggerA
+
+loggerB <-[bold]u- softwareB
+registerB -[hidden]u- softwareB
+loggerB -[dashed]r- registerB
+
+softwareA -[hidden]- Dummy
+Dummy -[hidden]- softwareB
+remove Dummy
+softwareA -[bold,#green]l-> softwareB : Trace Context
+
+skinparam boxPadding 50
+skinparam linetype polyline
+skinparam linetype ortho
+@enduml
+
