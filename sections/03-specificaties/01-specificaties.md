@@ -7,19 +7,19 @@ Het is ***AANBEVOLEN*** om het OpenTelemetry Protocol (OTLP) te gebruiken in de 
 Als gebruik wordt gemaakt van  HTTP/1.1 [[RFC9112]] of HTTP/2 [[RFC9113]] voor het uitvoeren van dataverwerkingen in meerdere applicaties ***MOET*** gebruik worden gemaakt van de Trace Context specificatie voor het uitwisselen van context informatie.
 
 
-## Component: Logboek
+# Component: Logboek
 
 Voor ieder Logboek waarin dataverwerkingen worden gelogd gelden de volgende specificaties voor gedrag en interface.
 
 
-### Gedrag
+## Gedrag
 
 Het Logboek ***MOET*** TLS afdwingen op connecties volgens de binnen de organisatie gangbare standaard.
 
 Het Logboek ***MOET*** het wegschrijven van elke logregel bevestigen.
 
 
-### Interface
+## Interface
 
 De interface ***MOET*** de volgende velden implementeren:
 
@@ -59,12 +59,12 @@ Het veld `attributes` is een lijst van *key-value pairs*, in een namespace met p
 - `dpl.core.data_subject_id`: ID van de betrokkene; versleuteld. Dit is bijvoorbeeld een `BSN` of `Vreemdelingennummer` waarmee wordt aangeduid welke persoon betrokkene is bij de verwerking, gelet op de AVG.
 
 
-## Component: Applicatie
+# Component: Applicatie
 
 Voor iedere applicatie waarin dataverwerkingen plaatsvinden die gelogd moeten worden gelden de volgende specificaties voor het gedrag.
 
 
-### Gedrag
+## Gedrag
 
 De applicatie ***MOET*** een Trace starten voor iedere Dataverwerking waarvan nog geen Trace bekend is.
 
@@ -77,6 +77,6 @@ Als een Dataverwerking meerdere Betrokkenen heeft dan ***MOET*** de applicatie v
 Als een applicatie aangeroepen kan worden vanuit een andere applicatie ***MOET*** de applicatie Trace Context metadata accepteren bij een dergelijke aanroepen deze metadata kunnen omzetten naar een `foreign_operation` bericht.
 
 
-### Interface
+## Interface
 
 De Applicatie heeft geen voor deze standaard relevante interface.
