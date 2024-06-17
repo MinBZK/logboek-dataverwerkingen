@@ -12,6 +12,7 @@ Voor ieder register met statische gegevens over dataverwerkingen die gelogd moet
 
 Het Register **MOET** iedere significante wijziging van een Verwerkingsactiviteit opslaan met een nieuwe identifier, zodat de `dpl.core.processing_activity_id` naar een eenduidige versie van de verwerkingsactiviteit verwijst.
 
+
 ### Interface
 
 Nog uitwerken, REST API, Read-only OpenAPI 3 specificatie.

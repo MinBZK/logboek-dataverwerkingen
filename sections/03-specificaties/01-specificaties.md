@@ -37,6 +37,7 @@ De interface ***MOET*** de volgende velden implementeren:
 | `attributes`          | list           | verplicht     | Verplichte key-value pairs |
 
 Het veld `status_code` is een enumeratie die de volgende waarden kan bevatten:
+
 - 0: STATUS_CODE_UNKNOWN:
 - 1: STATUS_CODE_OK:
 - 2: STATUS_CODE_ERROR:
@@ -49,13 +50,13 @@ Het veld `foreign_operation` is een `message`, opgebouwd uit de volgende velden:
 | `entity`              |  URI           | verplicht     | URI verwijzend naar externe partij |
 
 Het veld `resource` is een bericht, opgebouwd uit het volgende veld:
-  - `attributes`: Lijst attributen in de vorm van *KeyValue pairs*. De organisatie kan deze lijst gebruiken om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Dit zijn bijvoorbeeld naam en versienummer van een applicatie, of een verwijzing naar een record in een CMDB.
+
+- `attributes`: Lijst attributen in de vorm van *KeyValue pairs*. De organisatie kan deze lijst gebruiken om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Dit zijn bijvoorbeeld naam en versienummer van een applicatie, of een verwijzing naar een record in een CMDB.
 
 Het veld `attributes` is een lijst van *key-value pairs*, in een namespace met prefix `dpl.` (data processing log). De volgende attributen zijn mogelijk in de namespace `core`:
 
 - `dpl.core.processing_activity_id`: URI; Verwijzing naar register met meer informatie over de verwerkingsactiviteit
 - `dpl.core.data_subject_id`: ID van de betrokkene; versleuteld. Dit is bijvoorbeeld een `BSN` of `Vreemdelingennummer` waarmee wordt aangeduid welke persoon betrokkene is bij de verwerking, gelet op de AVG.
-
 
 
 ## Component: Applicatie
@@ -80,7 +81,3 @@ Als een applicatie aangeroepen kan worden vanuit een andere applicatie ***MOET**
 ### Interface
 
 De Applicatie heeft geen voor deze standaard relevante interface.
-
-
-
-
