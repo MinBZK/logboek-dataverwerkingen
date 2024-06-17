@@ -1,2 +1,0 @@
-<!-- markdownlint-disable first-line-heading -->
-Voor de werking van het logboek is het niet nodig de Registers te ontsluiten met een API. Wel moeten de Verwerkingsactiviteiten die gebruikt worden in de logregels ook voorkomen in een register. Wanneer bij het raadplegen van de logs geautomatiseerd context aan de logregels moet worden gegeven is een read-only interface op het register nodig. Deze extensie beschrijft die interface.
