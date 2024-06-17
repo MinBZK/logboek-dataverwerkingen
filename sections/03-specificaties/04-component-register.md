@@ -1,8 +1,3 @@
-# Specs Extensie Verwerkingsactiviteiten
-
-Deze extensie standaardiseert deels de Registers waarin Verwerkingsactiviteiten worden gespecificeerd, zoals o.a. het Register van Verwerkingsactiviteiten dat wordt beschreven in AVG art. 30.
-
-
 # Component: Register
 
 Voor ieder register met statische gegevens over dataverwerkingen die gelogd moeten worden gelden de volgende specificaties voor het gedrag en de interface.
@@ -14,5 +9,7 @@ Het Register **MOET** iedere significante wijziging van een Verwerkingsactivitei
 
 
 ## Interface
+
+Voor de werking van het logboek is het niet nodig de Registers te ontsluiten met een API. Wel moeten de Verwerkingsactiviteiten die gebruikt worden in de logregels ook voorkomen in een register. Wanneer bij het raadplegen van de logs geautomatiseerd context aan de logregels moet worden gegeven is een read-only interface op het register nodig. Deze interface wordt hieronder gespecificeerd.
 
 Nog uitwerken, REST API, Read-only OpenAPI 3 specificatie.

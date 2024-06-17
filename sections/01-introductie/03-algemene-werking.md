@@ -1,19 +1,12 @@
 # Algemene werking van de standaard
 
-Applicaties loggen Dataverwerkingen in een Logboek component. Elke Dataverwerking wordt apart gelogd. Dataverwerkingen binnen dezelfde context (bijvorbeeld een organisatie of binnen een verantwoordelijkheid) worden gegroepeerd met behulp van een Trace. Dataverwerkingen waarbij verschillende contexten zijn betrokken worden aan elkaar gelinkt door informatie over de Trace en Dataverwerking als metadata mee te geven met de Transactie. Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
+Applicaties loggen Dataverwerkingen in een Logboek component. Elke Dataverwerking wordt apart gelogd. Dataverwerkingen binnen dezelfde context (bijvoorbeeld een organisatie of een verantwoordelijkheid binnen een organisatie) worden gegroepeerd met behulp van een Trace. Dataverwerkingen waarbij verschillende contexten zijn betrokken worden aan elkaar gelinkt door informatie over de Trace en Dataverwerking als metadata mee te geven met de Transactie. Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
 
 
 ## Extensies
 
 De standaard Logboek Dataverwerkingen specificeert de basis voor het loggen en aan elkaar relateren van dataverwerkingen.
-Het standaardiseren van aanvullende functionaliteit wordt gedaan met behulp van `extensies`.
-
-Het is **AANBEVOLEN** om de standaard Logboek Dataverwerkingen te gebruiken met de volgende extensies:
-
-- *Extensie Register van Verwerkingsactiviteiten*<br>
-  Deze extensie breidt de standaard uit met een interfacebeschrijving voor Registers met statische informatie over verwerkingsactiviteiten die voorkomen in een organisatie. Dit is bijv. een interface op een *Register van Verwerkingsactiviteiten*
-  zoals bedoeld in AVG artikel 30.
-  - [ ] Discussie: Kan ook als losse standaard, wat is beter?
+Het standaardiseren van aanvullende functionaliteit wordt gedaan met behulp van `extensies`:
 
 *-- NB. De scope van onderstaande extensies is nog onderwerp van gesprek. --*
 
@@ -38,6 +31,7 @@ In een **profiel** worden aanvullende beperkingen en verplichtingen vastgelegd o
 manier kan een groep organisaties interoperabiliteit organiseren. Voorbeelden van aanvullende afspraken in een profiel zijn:
 
 - De combinatie van extensies die gebruikt wordt
+- Afspraken over specifieke aanvullende eisen (bijvoorbeeld over TLS configuratie)
 - Afspraken over data-retentie
 
 

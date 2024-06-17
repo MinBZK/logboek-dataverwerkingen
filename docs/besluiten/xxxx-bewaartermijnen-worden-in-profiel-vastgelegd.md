@@ -24,12 +24,3 @@ Bewaartermijnen worden in het Profiel vastgelegd
 
 - In het logrecord liggen geen gegevens vast over bewaartermijnen.
 - Vanuit een beheercomponent kunnen logrecords worden verwijderd door te kijken naar de datum van het logrecord in relatie tot de bewaartermijn die de organisatie hanteert voor logrecords. Deze bewaartermijn kan gezamelijk zijn afgesproken en ligt dan vast in het Profiel.
-
-<!-- Optioneel -->
-## Meer informatie
-
-{ Eventuele verwijzingen naar andere bronnen of websites }
-
-- [Website](https://example.com)
-- [Ander document](https://example.com)
-- ...

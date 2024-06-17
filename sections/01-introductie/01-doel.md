@@ -12,7 +12,7 @@ Door dataverwerkingen te loggen volgens de standaard kunnen organisaties het dat
 
 ## Werkingsgebied
 
-volgt
+*-- volgt --*
 
 
 ## Doelgroep
