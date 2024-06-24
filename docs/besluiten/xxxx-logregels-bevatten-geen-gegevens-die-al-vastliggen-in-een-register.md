@@ -14,7 +14,6 @@ Dit heeft nadelen, zoals:
 - De grote vrijheid in alle clients om invulling te geven aan deze gegevens leidt er vrijwel zeker toe dat verdere divergentie optreedt. Dit heeft o.a. tot gevolg dat het lastig wordt om te rapporteren uit de logs
 - De API voor het wegschrijven van logs wordt ingewikkeld en relatief traag voor het wegschrijven van records
 
-
 In de gewenste situatie:
 
 - staan alle statische gegevens in het Register van de Verwerkingsactiviteiten (RvVA), en bevatten logrecords verwijzigen naar dat register. Specifiek gaat dit om de resources 'verwerkingsactiviteiten' en 'organisaties'.
