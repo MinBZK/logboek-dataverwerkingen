@@ -1,6 +1,6 @@
 # Algemene werking van de standaard
 
-Applicaties loggen Dataverwerkingen in een Logboek component. Elke Dataverwerking wordt apart gelogd. Dataverwerkingen binnen dezelfde context (bijvoorbeeld een organisatie of een verantwoordelijkheid binnen een organisatie) worden gegroepeerd met behulp van een Trace. Dataverwerkingen waarbij verschillende contexten zijn betrokken worden aan elkaar gelinkt door informatie over de Trace en Dataverwerking als metadata mee te geven met de Transactie. Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
+Applicaties loggen Dataverwerkingen in een daarvoor ingerichte softwaretoepassing, het Logboek Dataverwerkingen. Elke Dataverwerking wordt apart gelogd. Dataverwerkingen binnen dezelfde context (bijvoorbeeld een organisatie of een verantwoordelijkheid binnen een organisatie) worden gegroepeerd met behulp van een Trace. Dataverwerkingen waarbij verschillende contexten zijn betrokken (typischeen samenwerking tussen meerdere organisaties) worden aan elkaar gelinkt door informatie over de Trace en Dataverwerking als metadata mee te geven met de Transactie. Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
 
 
 ## Extensies
@@ -11,7 +11,7 @@ Het standaardiseren van aanvullende functionaliteit wordt gedaan met behulp van 
 *-- NB. De scope van onderstaande extensies is nog onderwerp van gesprek. --*
 
 - *Extensie Betrokkenen*<br>
-  Met deze extensie wordt meer precies uitgewerkt hoe de identiteit van een betrokkene wordt gerelateerd aan een verwerking, zodat actief informeren of het faciliteren van inzageverzoeken gestandaardiseerd mogelijk wordt.
+  Met deze extensie wordt meer precies uitgewerkt hoe de identiteit van een <a>Betrokkene</a> wordt gerelateerd aan een verwerking, zodat actief informeren of het faciliteren van inzageverzoeken gestandaardiseerd mogelijk wordt. Dit is een nadere uitwerking van wat in de meest basale variant al mogelijk is rond vastlegging van de Betrokkene.
 
 - *Extensie Verwerkte Data*<br>
   Deze extensie specificeert een uniforme manier om verwerkte data in logregels op te nemen
@@ -37,5 +37,4 @@ manier kan een groep organisaties interoperabiliteit organiseren. Voorbeelden va
 
 ## Use case
 
-Typische use case voor het gebruik van de standaard is een samenwerking van meerdere organisaties die interoperabiliteit
-willen bereiken bij het loggen van dataverwerkingen, om zo op eenduidige manier te kunnen verantwoorden over de dataverwerking.
+Typische use case voor het gebruik van de standaard is een samenwerking tussen meerdere organisaties die interoperabiliteit willen bereiken bij het loggen van dataverwerkingen, om zo op eenduidige manier te kunnen verantwoorden over de dataverwerking.

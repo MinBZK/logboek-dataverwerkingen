@@ -17,7 +17,8 @@ Voor samenwerkende organisaties die zich ten doel stellen om gezamelijk op eendu
 
 ## Besluit
 
-Bewaartermijnen worden in het Profiel vastgelegd
+Bewaartermijnen worden in het Profiel vastgelegd.
+
 
 
 ## Gevolgen

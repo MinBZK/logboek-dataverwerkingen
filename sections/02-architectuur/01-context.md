@@ -19,6 +19,6 @@ Op basis van metadata die tussen Applicaties wordt uitgewisseld is het mogelijk 
 
 ![architecture](diagrams/architecture-context.svg "Componenten in context")
 
-De standaard beschrijft de interfaces (in het diagram aangeduid met groene lijnen), en het gedrag van de componenten voor zover relvant om technisch interoperabel te worden.
+De standaard beschrijft de interfaces (in het diagram aangeduid met groene lijnen), en het gedrag van de componenten voor zover relevant om technisch interoperabel te worden.
 
 De relatie tussen Logboek en Register heeft geen technische interface, wel moet een relatie gelegd kunnen worden tussen de logregels in het Logboek en de Verwerkingsactiviteiten in het Register.

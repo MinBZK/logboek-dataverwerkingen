@@ -18,4 +18,4 @@ Als een applicatie aangeroepen kan worden vanuit een andere applicatie ***MOET**
 
 ## Interface
 
-De Applicatie heeft geen voor deze standaard relevante interface.
+De Applicatie heeft geen voor deze standaard relevante interface. Voor het uitwisselen van de <a>Trace</a> wordt W3C Trace Context gebruikt.
