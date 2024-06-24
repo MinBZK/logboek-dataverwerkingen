@@ -9,11 +9,14 @@
 Om te optimaliseren voor de het lezen en begrijpen van de logs is het denkbaar om vrijwel alle informatie redundant wordt weggeschreven in elk logrecord, zodat er geen afhankelijkheid bestaat van andere bronnen.
 
 Dit heeft nadelen, zoals:
+
 - Wanneer de statische gegevens (zoals bewaartermijn, verantwoordelijke, etc.) wijzigen, zou dit moeten worden aangepast in alle logrecords. Dat verhoudt zich slecht tot het 'inmutable' zijn van deze logrecords.
 - De grote vrijheid in alle clients om invulling te geven aan deze gegevens leidt er vrijwel zeker toe dat verdere divergentie optreedt. Dit heeft o.a. tot gevolg dat het lastig wordt om te rapporteren uit de logs
 - De API voor het wegschrijven van logs wordt ingewikkeld en relatief traag voor het wegschrijven van records
 
+
 In de gewenste situatie:
+
 - staan alle statische gegevens in het Register van de Verwerkingsactiviteiten (RvVA), en bevatten logrecords verwijzigen naar dat register. Specifiek gaat dit om de resources 'verwerkingsactiviteiten' en 'organisaties'.
 - kan bij het configureren van clients in de RvVA-API worden opgezocht welke organisaties en verwerkingsactiviten van toepassing zijn
 - kunnen wijzigingen in verwerkingsactiviteiten worden doorgevoerd zonder dat logrecords gewijzigd behoeven te worden
@@ -38,6 +41,7 @@ Logregels bevatten geen informatie over Verwerkingsactiviteiten en Veranwoordlei
 
 Met de volgende sequentie diagrammen wordt in beeld gebracht wat de gevolgen zijn voor de diverse flows in het gebruik van de standaard.
 
+
 ### Loggen van een verwerking
 
 Het wegschrijven van een verwerking in de log-API is uiterst simpel:
@@ -52,6 +56,7 @@ sequenceDiagram
 ```
 
 Deze transactie is geoptimaliseerd op eenvoud en snelheid, want deze heeft rechtstreeks invloed op de snelheid van verwerkingen. Deze transactie moet schaalbaar zijn naar bijv. tienduizenden transacties per seconde.
+
 
 ### Tonen van een verwerking
 
