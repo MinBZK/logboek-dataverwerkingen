@@ -10,7 +10,6 @@ loggen van dataverwerkingen te implementeren, door voor de volgende functionalit
 Door Dataverwerkingen te loggen volgens de standaard kunnen organisaties het datagebruik verantwoorden. De standaard is gericht op verantwoording van Dataverwerkingen door Nederlandse (overheids)organisaties, gelet op onder meer de Algemene Verordening Gegevensbescherming en de Algemene Wet Bestuursrecht. Een uitwerking vanuit juridisch perspectief is te vinden op *link*.
 
 
-
 ## Werkingsgebied
 
 *-- volgt --*
