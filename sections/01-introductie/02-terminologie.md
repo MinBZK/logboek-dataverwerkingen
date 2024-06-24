@@ -2,6 +2,7 @@
 
 De volgende lijst beschrijft terminologie in de betekenis zoals deze wordt gebruikt in dit document.
 
+
 <dfn data-lt="Applicaties">Applicatie</dfn>
 
 Softwaretoepassing waarmee dataverwerkingen worden uitgevoerd.

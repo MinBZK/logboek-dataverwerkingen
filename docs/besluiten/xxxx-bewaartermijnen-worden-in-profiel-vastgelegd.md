@@ -20,6 +20,7 @@ Voor samenwerkende organisaties die zich ten doel stellen om gezamelijk op eendu
 Bewaartermijnen worden in het Profiel vastgelegd.
 
 
+
 ## Gevolgen
 
 - In het logrecord liggen geen gegevens vast over bewaartermijnen.
