@@ -7,7 +7,7 @@
 sequenceDiagram
     participant A as Applicatie
     participant L as Logboek
-    Note over A, L: Dataverwerking in Applicatie
+    Note over A: Dataverwerking in Applicatie
     A->>+L: Schrijf logregel in Logboek
     L-->>-A: ack
 ```
@@ -24,7 +24,7 @@ sequenceDiagram
     participant F as Inzage Applicatie
     participant L as Logboek
     participant R as Register
-    Note over F, R: Betrokkene vraagt om inzage
+    Note over F: Betrokkene vraagt om inzage
     F->>+L: Vraag logregels van betrokkene
     Activate F
     L-->>-F: logregels

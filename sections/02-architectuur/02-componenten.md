@@ -12,7 +12,7 @@ In een Applicatie is de context van de Dataverwerking bekend, zoals welke Verwer
 
 Een Logboek is een Applicatie met een specifieke rol in de context van deze standaard. In het Logboek worden Dataverwerkingen gelogd.
 
-Dataverwerkingen in het Register worden *niet* gelogd in een Logboek Dataverwerkingen, dit zou een oneindige recursiviteit veroorzaken.
+Dataverwerkingen in het Logboek worden *niet* als nieuwe Dataverwerking gelogd in een Logboek, dit zou een oneindige recursiviteit veroorzaken.
 
 
 ## Register
