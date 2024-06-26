@@ -114,5 +114,12 @@ var organisationConfig = {
             authors: ["T. Preston-Werner"],
             date: "June 2013"
         },
+	"ADR-TS": {
+            authors: [""],
+            date: "March 07, 2024",
+            href: "https://gitdocumentatie.logius.nl/publicatie/api/mod-ts/",
+            publisher: "Kennisplatform API's",
+            title: "API Design Rules Module: Transport Security"
+        },    
     },
 }
