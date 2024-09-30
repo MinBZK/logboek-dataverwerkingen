@@ -17,8 +17,10 @@ Dataverwerkingen in het Logboek zelf worden *niet* gelogd in een Logboek Dataver
 
 ## Register
 
- Een Register bevat informatie over mogelijke dataverwerkingen die voorkomen bij een Verantwoordelijke. Het Register is relatief statisch, het bevat informatie over welke Verwerkingsactiviteiten voorkomen binnen een organisatie. Elke Verwerkingsactiveit heeft een unieke code waarmee de Verwerkingsactiviteit kan worden aangeduid. Deze code wordt gebruikt om logregels te relateren aan een Verwerkingsactiviteit.
+Een Register bevat statische informatie over Verwerkingsactiviteiten die voorkomen bij een Verantwoordelijke. Elke Verwerkingsactiveit heeft een unieke code waarmee de Verwerkingsactiviteit kan worden aangeduid. Deze code wordt gebruikt om logregels te relateren aan een Verwerkingsactiviteit.
 
-Het Register kan een Applicatie zijn, in dat geval is het een Applicatie met een specifieke rol in de context van deze standaard. Conceptueel kan het ook een Register in de vorm van een papieren document zijn.
+Het Register kan een Applicatie zijn, in dat geval is het een Applicatie met een specifieke rol in de context van deze standaard. Eventueel kan het ook een Register in de vorm van een document zijn.
 
 Dataverwerkingen in het Register worden gelogd in een Logboek Dataverwerkingen. Bijvoorbeeld: het toevoegen van een Verwerkingsactiviteit of een Verantwoordelijke.
+
+Voor alle Dataverwerkingen waarbij persoonsgegevens worden verwerkt is wettelijk geregeld dat de Verwerkingsactiviteiten moeten worden beschreven in het zogenaamde Register van Verwerkingsactiviteiten (AVG art. 30). Vanwege deze wettelijke plicht zal dit Register in veel organisaties beschikbaar zijn.

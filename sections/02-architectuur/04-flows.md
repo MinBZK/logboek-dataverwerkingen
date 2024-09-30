@@ -25,7 +25,7 @@ sequenceDiagram
     participant L as Logboek
     participant R as Register
     Note over F, R: Betrokkene vraagt om inzage
-    F->>+L: Vraag logregels van betrokkene
+    F->>+L: Vraag logregels van Betrokkene
     Activate F
     L-->>-F: logregels
     F->>+R: Vraag Verwerkingsactiviteiten bij logregels

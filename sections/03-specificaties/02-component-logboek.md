@@ -47,4 +47,4 @@ Het veld `resource` is een bericht, opgebouwd uit het volgende veld:
 Het veld `attributes` is een lijst van *key-value pairs*, in een namespace met prefix `dpl.` (data processing log). De volgende attributen zijn mogelijk in de namespace `core`:
 
 - `dpl.core.processing_activity_id`: URI; Verwijzing naar register met meer informatie over de verwerkingsactiviteit
-- `dpl.core.data_subject_id`: ID van de betrokkene; versleuteld. Dit is bijvoorbeeld een `BSN` of `Vreemdelingennummer` waarmee wordt aangeduid welke persoon betrokkene is bij de verwerking, gelet op de AVG.
+- `dpl.core.data_subject_id`: ID van de Betrokkene; versleuteld. Dit is bijvoorbeeld een `BSN` of `Vreemdelingennummer` waarmee wordt aangeduid welke persoon Betrokkene is bij de verwerking, gelet op de AVG.

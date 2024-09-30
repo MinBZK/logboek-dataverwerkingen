@@ -17,7 +17,7 @@ Dit heeft nadelen, zoals:
 
 In de gewenste situatie:
 
-- staan alle statische gegevens in het Register van de Verwerkingsactiviteiten (RvVA), en bevatten logrecords verwijzigen naar dat register. Specifiek gaat dit om de resources 'verwerkingsactiviteiten' en 'organisaties'.
+- staan alle statische gegevens in het Register van de Verwerkingsactiviteiten (RvVA), en bevatten logrecords verwijzigen naar dat Register. Specifiek gaat dit om de resources 'verwerkingsactiviteiten' en 'organisaties'.
 - kan bij het configureren van clients in de RvVA-API worden opgezocht welke organisaties en verwerkingsactiviten van toepassing zijn
 - kunnen wijzigingen in verwerkingsactiviteiten worden doorgevoerd zonder dat logrecords gewijzigd behoeven te worden
 
@@ -25,19 +25,19 @@ Met name het wegschrijven van logs kan op deze manier met hogere performance wor
 
 Wanneer het aan de gebruiker is om in de software die de Logboek API aanroept de namen van acties, de vetrouwelijkheid en de bewaartermijn te bepalen, zal de invulling daarvan op allerlei manieren uiteen gaan lopen. Door dit in het RvVA te bepalen zal eerder uniformering plaatsvinden. De vulling van RvVA's kan waarschijnlijk zelfs in hoge mate gestandaardiseerd worden.
 
-Met meer gestandaardiseerde namen en bewaartermijnenen en een eenduidige omgang met vertrouwelijkheid is het ook eenvoudiger om eenduidige te communiceren naar de betrokkene. Bijvoorbeeld: een portaal dat aan de betrokkene toont hoe de persoonsgegevens zijn verwerkt, is lastig vorm te geven wanneer in de praktijk blijkt dat software-leveranciers verschillende interpretaties hebben van het niveau waarbij sprake is van een verwerking, handeling of actie. Eenduidige interpretatie is cruciaal, en dit kan waarschijnlijk alleen in het RvVA.
+Met meer gestandaardiseerde namen en bewaartermijnenen en een eenduidige omgang met vertrouwelijkheid is het ook eenvoudiger om eenduidige te communiceren naar de Betrokkene. Bijvoorbeeld: een portaal dat aan de Betrokkene toont hoe de persoonsgegevens zijn verwerkt, is lastig vorm te geven wanneer in de praktijk blijkt dat software-leveranciers verschillende interpretaties hebben van het niveau waarbij sprake is van een verwerking, handeling of actie. Eenduidige interpretatie is cruciaal, en dit kan waarschijnlijk alleen in het RvVA.
 
 Overigens werkt het conceptueel wél wanneer men geen API op het RvVA aanbiedt, deze link kan ook handmatig worden gelegd iedere keer als deze informatie nodig is, en het RvVA bijvoorbeeld alleen bestaat als Excel document.
 
 
 ## Besluit
 
-Logregels bevatten geen informatie over Verwerkingsactiviteiten en Veranwoordleijkheden die al vastliggen in een Register
+Logregels bevatten geen informatie over Verwerkingsactiviteiten en Verantwoordelijkheden die al vastliggen in een Register
 
 
 ## Gevolgen
 
-- In de standaard Logboek Dataverwerkingen is het nodig om ook de benodigde interface op de RvVA te standaardiseren. Dit is nodig om de logs geautomatiseerd en realtime te kunnen interpreteren: zonder gestadnaardiseerde manier om informatie over verwerkingsactiviteiten op te vragen kan men aan logregels niet zien of het verwerkingen, handelingen of acties betreft.
+- In de standaard Logboek Dataverwerkingen is het nodig om ook de benodigde interface op de RvVA te standaardiseren. Dit is nodig om de logs geautomatiseerd en realtime te kunnen interpreteren: zonder gestandaardiseerde manier om informatie over verwerkingsactiviteiten op te vragen kan men aan logregels niet zien of het verwerkingen, handelingen of acties betreft.
 
 Met de volgende sequentie diagrammen wordt in beeld gebracht wat de gevolgen zijn voor de diverse flows in het gebruik van de standaard.
 
@@ -60,7 +60,7 @@ Deze transactie is geoptimaliseerd op eenvoud en snelheid, want deze heeft recht
 
 ### Tonen van een verwerking
 
-Voor het op betekenisvolle manier tonen van verwerkingen aan bijvoorbeeld een betrokkene is het dan nodig om gegevens op te vragen uit zowel de logs als het RvVA. Deze flow mag wat complexer zijn, omdat deze niet voor alle vastgelegde data wordt uitgevoerd en het belang van de bevraging rechtvaardigt dat een bevraging wat langer kan duren.
+Voor het op betekenisvolle manier tonen van verwerkingen aan bijvoorbeeld een Betrokkene is het dan nodig om gegevens op te vragen uit zowel de logs als het RvVA. Deze flow mag wat complexer zijn, omdat deze niet voor alle vastgelegde data wordt uitgevoerd en het belang van de bevraging rechtvaardigt dat een bevraging wat langer kan duren.
 
 ```mermaid
 sequenceDiagram
@@ -68,7 +68,7 @@ sequenceDiagram
     participant L as Logboek
     participant R as Register
     Note over F, R: Betrokkene vraagt om inzage
-    F->>+L: Vraag logrecords van betrokkene
+    F->>+L: Vraag logrecords van Betrokkene
     Activate F
     L-->>-F: logrecords
     F->>+R: Vraag Verwerkingsactiviteiten bij logrecords

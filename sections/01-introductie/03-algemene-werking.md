@@ -7,7 +7,6 @@ Applicaties loggen metadata over Dataverwerkingen in een daarvoor ingerichte sof
 
 De standaard Logboek Dataverwerkingen specificeert de basis voor het loggen en aan elkaar relateren van dataverwerkingen.
 Het standaardiseren van aanvullende functionaliteit wordt gedaan met behulp van `extensies`:
-Het standaardiseren van aanvullende functionaliteit wordt gedaan met behulp van `extensies`:
 
 *-- NB. De scope van onderstaande extensies is nog onderwerp van gesprek. --*
 
@@ -19,11 +18,11 @@ Het standaardiseren van aanvullende functionaliteit wordt gedaan met behulp van 
 
 - *Extensie Inzage*<br>
   Deze extensie heeft een afhankelijkheid van de extensies *Betrokkenen* en *Verwerkte Data*, en biedt een interface op
-  de logs vanuit het perspectief van de betrokkene.
+  de logs vanuit het perspectief van de Betrokkene.
 
 - *Extensie Manipulatiebestendigheid*<br>
-  Deze extensie beschrijft hoe logs zodanig kunnen worden ingericht dat manipulatie van de logregords kan worden aangetoond,
-  en hierover zinnige uitspraken kunnen worden gedaan wanneer de logs van meerdere organisaties aan elkaar worden gerelateerd.
+  Deze extensie beschrijft hoe Logboeken zodanig kunnen worden ingericht dat manipulatie van de Logregels kan worden aangetoond,
+  en hierover zinnige uitspraken kunnen worden gedaan wanneer de Logregels van meerdere organisaties aan elkaar worden gerelateerd.
 
 
 ## Profielen
@@ -39,4 +38,4 @@ manier kan een groep organisaties interoperabiliteit organiseren. Voorbeelden va
 
 ## Use case
 
-Typische use case voor het gebruik van de standaard is een samenwerking tussen meerdere organisaties die interoperabiliteit willen bereiken bij het loggen van dataverwerkingen, om zo op eenduidige manier te kunnen verantwoorden over de dataverwerking.
+Een typische use case voor het gebruik van de standaard is een samenwerking tussen meerdere organisaties die interoperabiliteit willen bereiken bij het loggen van dataverwerkingen, om zo op eenduidige manier te kunnen verantwoorden over de dataverwerking.

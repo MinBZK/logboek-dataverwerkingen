@@ -10,18 +10,17 @@ Iedere softwaretoepassing waarmee dataverwerkingen worden uitgevoerd.
 
 <dfn data-lt="Betrokkenen">Betrokkene</dfn>
 
-Als persoonsgegvens worden verwerkt, wordt de persoon van wie de organisatie persoonsgegevens verwerkt de 'betrokkene' genoemd. Dat is dus degene over wie de dataverwerking gaat.
+Als persoonsgegevens worden verwerkt, wordt de persoon van wie de organisatie persoonsgegevens verwerkt de 'Betrokkene' genoemd. Dat is dus degene over wie de dataverwerking gaat. De Betrokkene is degene op wie een persoonsgegeven betrekking heeft en die daarmee geïdentificeerd kan worden. Als identificeerbaar wordt beschouwd een natuurlijke persoon die direct of indirect kan worden geïdentificeerd, met name aan de hand van een identificator zoals een naam, een identificatienummer, locatiegegevens, een online identificator of van een of meer elementen die kenmerkend zijn voor de fysieke, fysiologische, genetische, psychische, economische, culturele of sociale identiteit van die natuurlijke persoon [NORA: De Privacy Baseline/Persoonsgegevens en bijzondere persoonsgegevens]
 
 
 <dfn data-lt="Dataverwerkingen">Dataverwerking</dfn>
 
-Aansluitend bij de Algemene Verordening Persoonsgegevens (art. 4 lid 2), maar breder toegepast dan alleen persoonsgegevens, wordt voor deze standaard *‘elke bewerking of elk geheel van bewerkingen met betrekking tot gegevens, al dan niet uitgevoerd via geautomatiseerde procedures, zoals het verzamelen, vastleggen, ordenen, structureren, opslaan, bijwerken of wijzigen, opvragen, raadplegen, gebruiken, verstrekken door middel van doorzending, verspreiden of op andere wijze ter beschikking stellen, aligneren of combineren, afschermen, wissen of vernietigen van gegevens’* opgevat als een dataverwerking.
+Aansluitend bij de Algemene Verordening Gegevensbescherming (art. 4 lid 2), maar breder toegepast dan alleen persoonsgegevens, wordt voor deze standaard *‘elke bewerking of elk geheel van bewerkingen met betrekking tot gegevens, al dan niet uitgevoerd via geautomatiseerde procedures, zoals het verzamelen, vastleggen, ordenen, structureren, opslaan, bijwerken of wijzigen, opvragen, raadplegen, gebruiken, verstrekken door middel van doorzending, verspreiden of op andere wijze ter beschikking stellen, aligneren of combineren, afschermen, wissen of vernietigen van gegevens’* opgevat als een dataverwerking.
 
 
 <dfn>Inzage</dfn>
 
-*--nog definiëren--*
-
+De Betrokkene heeft het recht om van de verwerkingsverantwoordelijke uitsluitsel te verkrijgen over het al dan niet verwerken van hem betreffende persoonsgegevens en, wanneer dat het geval is, om inzage te verkrijgen van die persoonsgegevens (AVG, art. 15, lid 1). Met *Inzage* doelen we op de handeling waarmee uitvoering wordt gegeven aan dat recht.
 
 <dfn data-lt="Logboeken">Logboek</dfn>
 
@@ -45,7 +44,7 @@ Concept waarmee bij elkaar behorende Dataverwerkingen binnen de grenzen van een 
 
 <dfn data-lt="Verantwoordelijke|Verantwoordelijken|Verwerkingsverantwoordelijken">Verwerkingsverantwoordelijke</dfn>
 
-De Verwerkingsverantwoordelijke (ook wel 'Verantwoordelijke' genoemd) is een organisatie of persoon die het doel van en de middelen voor het gebruik van gegevens bepaalt.
+Een natuurlijke persoon of rechtspersoon, een overheidsinstantie, een dienst of een ander orgaan die/dat, alleen of samen met anderen, het doel van en de middelen voor de verwerking van persoonsgegevens vaststelt (AVG art. 4, lid 7.)
 
 
 <dfn data-lt="Verwerkingsactiviteiten">Verwerkingsactiviteit</dfn>
